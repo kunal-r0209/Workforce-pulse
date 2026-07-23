@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: workforce-pulse
+    runtime: python
+    region: singapore   # closest to India
+    plan: free
+
+    # Build: compile React, copy to backend/static, install Python deps
+    buildCommand: "bash build.sh && pip install -r backend/requirements.txt"
+
+    # Start: run FastAPI which serves both API + React UI
+    startCommand: "cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false          # You set this manually in Render dashboard
+
+      - key: ENVIRONMENT
+        value: production
+
+      - key: PYTHON_VERSION
+        value: "3.11.0"       # stable, fast — avoids Python 3.14 edge cases
