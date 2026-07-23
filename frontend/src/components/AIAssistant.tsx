@@ -177,7 +177,7 @@ export default function AIAssistant({ open, onClose, filters }: Props) {
         {messages.map((msg, i) => (
           <div key={i} className={`ai-message ${msg.role}`}>
             <div className={`msg-avatar ${msg.role}`}>
-              {msg.role === 'ai' || msg.role === 'assistant' ? '🤖' : '👤'}
+              {msg.role === 'assistant' ? '🤖' : '👤'}
             </div>
             <div className={`msg-bubble ${msg.role === 'assistant' ? 'ai' : 'user'}`}>
               {msg.content === '' && loading && i === messages.length - 1 ? (

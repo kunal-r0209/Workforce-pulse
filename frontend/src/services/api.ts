@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 // API service layer – all calls go through here
 import axios from 'axios'
 
