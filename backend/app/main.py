@@ -1,0 +1,54 @@
+"""
+FastAPI Application Entry Point
+"""
+import os
+from contextlib import asynccontextmanager
+from dotenv import load_dotenv
+
+load_dotenv()
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+from .routers import dashboard, ai_chat, export_data
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Pre-load and cache data on startup
+    from .services.data_pipeline import load_and_process
+    load_and_process()
+    yield
+
+
+app = FastAPI(
+    title="Workforce Pulse API",
+    description="Employee productivity analytics platform",
+    version="1.0.0",
+    lifespan=lifespan,
+)
+
+# CORS — allow all origins for development; restrict in production
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(dashboard.router, prefix="/api/dashboard", tags=["Dashboard"])
+app.include_router(ai_chat.router, prefix="/api/ai", tags=["AI"])
+app.include_router(export_data.router, prefix="/api/export", tags=["Export"])
+
+
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
+
+@app.get("/api/data-quality")
+async def data_quality():
+    from .services.data_pipeline import get_data
+    data = get_data()
+    return data["audit"]

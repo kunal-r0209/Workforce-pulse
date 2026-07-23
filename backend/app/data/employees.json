@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "export_version": "2.1",
+    "exported_at": "2025-10-25T06:00:00Z",
+    "source": "HRMS_v2",
+    "note": "Mid-year schema migration — some records retain legacy field names"
+  },
+  "data": {
+    "employees": [
+      {
+        "employee_id": "E001",
+        "name": "Arjun Sharma",
+        "department": "Operations",
+        "role": "Operations Manager",
+        "tenure_years": 4.5,
+        "compensation": {
+          "amount": 18,
+          "unit": "LPA"
+        },
+        "working_hours": { "start": "09:00", "end": "18:00" },
+        "status": "active"
+      },
+      {
+        "EmployeeID": "E002",
+        "name": "Priya Nair",
+        "Dept": "Operations",
+        "meta": {
+          "role": "Operations Analyst",
+          "tenure": 2.1
+        },
+        "compensation": {
+          "amount": 950000,
+          "unit": "annual_inr"
+        },
+        "working_hours": "9-18",
+        "status": "active"
+      },
+      {
+        "employee_id": "E003",
+        "name": "Rahul Verma",
+        "department": "Operations",
+        "role": "Process Coordinator",
+        "tenure_years": 1.8,
+        "compensation": {
+          "amount": 650,
+          "unit": "hourly_inr"
+        },
+        "working_hours": { "start": "09:00", "end": "18:00" },
+        "status": "active"
+      },
+      {
+        "employee_id": "E004",
+        "name": "Sneha Kulkarni",
+        "department": "Finance",
+        "role": "Finance Analyst",
+        "tenure_years": 3.2,
+        "compensation": {
+          "amount": 12,
+          "unit": "LPA"
+        },
+        "working_hours": "9-18",
+        "status": "active"
+      },
+      {
+        "EmployeeID": "E005",
+        "name": "Vikram Reddy",
+        "Dept": "Finance",
+        "meta": {
+          "role": "Senior Finance Analyst",
+          "tenure": 5.7
+        },
+        "compensation": {
+          "amount": 16,
+          "unit": "LPA"
+        },
+        "working_hours": { "start": "09:00", "end": "18:00" },
+        "status": "active"
+      },
+      {
+        "employee_id": "E006",
+        "name": "Deepak Malhotra",
+        "department": "Sales",
+        "role": "Sales Executive",
+        "tenure_years": 2.3,
+        "compensation": {
+          "amount": 750,
+          "unit": "hourly_inr"
+        },
+        "working_hours": { "start": "09:00", "end": "18:00" },
+        "status": "active"
+      },
+      {
+        "employee_id": "E007",
+        "name": "Kavya Iyer",
+        "department": "Sales",
+        "role": "Sales Manager",
+        "tenure_years": 6.1,
+        "compensation": {
+          "amount": 22,
+          "unit": "LPA"
+        },
+        "working_hours": "9-18",
+        "status": "active"
+      },
+      {
+        "EmployeeID": "E008",
+        "name": "Rohan Gupta",
+        "Dept": "Sales",
+        "meta": {
+          "role": "Sales Executive",
+          "tenure": 1.4
+        },
+        "compensation": {
+          "amount": 700,
+          "unit": "hourly_inr"
+        },
+        "working_hours": { "start": "09:00", "end": "18:00" },
+        "status": "active"
+      },
+      {
+        "employee_id": "E009",
+        "name": "Ananya Pillai",
+        "department": "Customer Support",
+        "role": "Support Lead",
+        "tenure_years": 3.8,
+        "compensation": {
+          "amount": 11,
+          "unit": "LPA"
+        },
+        "working_hours": { "start": "09:00", "end": "18:00" },
+        "status": "active"
+      },
+      {
+        "employee_id": "E010",
+        "name": "Suresh Menon",
+        "department": "Customer Support",
+        "role": "Support Analyst",
+        "tenure_years": 2.0,
+        "compensation": {
+          "amount": 600,
+          "unit": "hourly_inr"
+        },
+        "working_hours": "9-18",
+        "status": "active"
+      },
+      {
+        "EmployeeID": "E011",
+        "name": "Meera Joshi",
+        "Dept": "Customer Support",
+        "meta": {
+          "role": "Support Analyst",
+          "tenure": 1.2
+        },
+        "compensation": {
+          "amount": 8,
+          "unit": "LPA"
+        },
+        "working_hours": { "start": "09:00", "end": "18:00" },
+        "status": "active"
+      },
+      {
+        "employee_id": "E012",
+        "name": "Aditya Bhatt",
+        "department": "HR",
+        "role": "HR Generalist",
+        "tenure_years": 2.9,
+        "compensation": {
+          "amount": 9,
+          "unit": "LPA"
+        },
+        "working_hours": "9-18",
+        "status": "active"
+      },
+      {
+        "employee_id": "E013",
+        "name": "Pooja Saxena",
+        "department": "HR",
+        "role": "HR Manager",
+        "tenure_years": 4.4,
+        "compensation": {
+          "amount": 14,
+          "unit": "LPA"
+        },
+        "working_hours": { "start": "09:00", "end": "18:00" },
+        "status": "active"
+      },
+      {
+        "EmployeeID": "E013",
+        "name": "Pooja S.",
+        "department": "HR",
+        "meta": {
+          "role": "HR Manager",
+          "tenure": 4.4
+        },
+        "compensation": {
+          "amount": 13.5,
+          "unit": "LPA"
+        },
+        "working_hours": "9-18",
+        "status": "active"
+      },
+      {
+        "employee_id": "E014",
+        "name": "Nikhil Kapoor",
+        "department": "Marketing",
+        "role": "Marketing Specialist",
+        "tenure_years": 1.9,
+        "compensation": {
+          "amount": 550,
+          "unit": "hourly_inr"
+        },
+        "working_hours": { "start": "09:00", "end": "18:00" },
+        "status": "active"
+      },
+      {
+        "employee_id": "E015",
+        "name": "Divya Singh",
+        "department": "Marketing",
+        "role": "Content Strategist",
+        "tenure_years": 3.1,
+        "compensation": {
+          "amount": 10,
+          "unit": "LPA"
+        },
+        "working_hours": "9-18",
+        "status": "terminated",
+        "terminated_on": "2025-10-20"
+      },
+      {
+        "employee_id": "E016",
+        "name": "Kiran Bose",
+        "department": "Finance",
+        "role": "Finance Manager",
+        "tenure_years": 7.2,
+        "compensation": {
+          "amount": 25,
+          "unit": "LPA"
+        },
+        "working_hours": { "start": "09:00", "end": "18:00" },
+        "status": "active"
+      }
+    ]
+  }
+}
