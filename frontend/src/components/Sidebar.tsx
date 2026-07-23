@@ -41,7 +41,7 @@ export default function Sidebar({ page, onPageChange }: Props) {
 
         <a
           className="nav-item"
-          href="https://github.com"
+          href="https://github.com/kunal-r0209/Workforce-pulse"
           target="_blank"
           rel="noreferrer"
         >
