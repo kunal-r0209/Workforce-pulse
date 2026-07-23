@@ -13,6 +13,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
+from .routers import dashboard, ai_chat, export_data
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
